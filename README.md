@@ -1,6 +1,13 @@
 # dwm
 my dwm build on Debian 12
 
+ROFI Themes came from this github
+https://github.com/newmanls/rofi-themes-collection
+
+DWMScripts came from this gitlab
+https://gitlab.com/dwt1/dmscripts
+
+
 Minimum X11
 
 ```shell
