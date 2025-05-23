@@ -66,7 +66,7 @@ static const char *roficmd[]  = { "rofi", "-show", "drun", "-show-emojis", NULL 
 static const char *browswercmd[]  = { "google-chrome", NULL };
 static const char *filescmd[]  = { "nautilus", NULL };
 static const char *rdpcmd[]  = { "remmina", NULL };
-static const char *flameshotcmd[]  = { "flameshot gui", NULL };
+static const char *flameshotcmd[]  = { "flameshot","gui", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
