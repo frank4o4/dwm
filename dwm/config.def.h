@@ -67,15 +67,18 @@ static const char *browswercmd[]  = { "google-chrome", NULL };
 static const char *filescmd[]  = { "nautilus", NULL };
 static const char *rdpcmd[]  = { "remmina", NULL };
 static const char *flameshotcmd[]  = { "flameshot","gui", NULL };
+static const char *slockcmd[]  = { "slock", NULL };
+
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_p,  spawn,          {.v = roficmd } },
+	{ MODKEY,                       XK_p,      spawn,          {.v = roficmd } },
 	{ MODKEY,             			XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,             			XK_b, 	   spawn,          {.v = browswercmd } },
 	{ MODKEY,             			XK_e, 	   spawn,          {.v = filescmd } },
 	{ MODKEY,             			XK_r, 	   spawn,          {.v = rdpcmd } },
-	{ 0,             			XK_Print,  spawn,          {.v = flameshotcmd } },
+	{ 0,             				XK_Print,  spawn,          {.v = flameshotcmd } },
+	{ MODKEY|ShiftMask,         	XK_l,  	   spawn,      	   {.v = slockcmd } },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
