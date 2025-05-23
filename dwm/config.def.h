@@ -66,6 +66,7 @@ static const char *roficmd[]  = { "rofi", "-show", "drun", "-show-emojis", NULL 
 static const char *browswercmd[]  = { "google-chrome", NULL };
 static const char *filescmd[]  = { "nautilus", NULL };
 static const char *rdpcmd[]  = { "remmina", NULL };
+static const char *flameshotcmd[]  = { "flameshot gui", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -74,6 +75,7 @@ static const Key keys[] = {
 	{ MODKEY,             			XK_b, 	   spawn,          {.v = browswercmd } },
 	{ MODKEY,             			XK_e, 	   spawn,          {.v = filescmd } },
 	{ MODKEY,             			XK_r, 	   spawn,          {.v = rdpcmd } },
+	{ MODKEY,             			XK_Print,  spawn,          {.v = flameshotcmd } },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
