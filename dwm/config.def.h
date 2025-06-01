@@ -47,6 +47,9 @@ static const Layout layouts[] = {
 
 /* key definitions */
 #define MODKEY Mod4Mask
+#define MODKEY2 ControlMask
+#define MODKEY3 Mod1Mask
+
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -64,10 +67,11 @@ static const char *termcmd[]  = { "kitty", NULL };
 /* custom commands */
 static const char *roficmd[]  = { "rofi", "-show", "drun", "-show-emojis", NULL };
 static const char *browswercmd[]  = { "google-chrome", NULL };
-static const char *filescmd[]  = { "nautilus", NULL };
+static const char *filescmd[]  = { "thunar", NULL };
 static const char *rdpcmd[]  = { "remmina", NULL };
 static const char *flameshotcmd[]  = { "flameshot","gui", NULL };
 static const char *slockcmd[]  = { "slock", NULL };
+static const char *joplincmd[]  = { "/home/frank4o4/.joplin/Joplin.AppImage", NULL };
 
 
 static const Key keys[] = {
@@ -78,14 +82,15 @@ static const Key keys[] = {
 	{ MODKEY,             			XK_e, 	   spawn,          {.v = filescmd } },
 	{ MODKEY,             			XK_r, 	   spawn,          {.v = rdpcmd } },
 	{ 0,             				XK_Print,  spawn,          {.v = flameshotcmd } },
-	{ MODKEY|ShiftMask,         	XK_l,  	   spawn,      	   {.v = slockcmd } },
+	{ MODKEY,         				XK_l,  	   spawn,      	   {.v = slockcmd } },
+	{ MODKEY,         				XK_j,  	   spawn,      	   {.v = joplincmd } },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
-	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
-	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
-	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
-	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
-	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+	{ MODKEY2,                       XK_j,      focusstack,     {.i = +1 } },
+	{ MODKEY2,                       XK_k,      focusstack,     {.i = -1 } },
+	{ MODKEY2,                       XK_i,      incnmaster,     {.i = +1 } },
+	{ MODKEY2,                       XK_d,      incnmaster,     {.i = -1 } },
+	{ MODKEY2,                       XK_h,      setmfact,       {.f = -0.05} },
+	{ MODKEY2,                       XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
