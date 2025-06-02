@@ -65,7 +65,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "kitty", NULL };
 
 /* custom commands */
-static const char *roficmd[]  = { "rofi", "-show", "drun", "-show-emojis", NULL };
+static const char *roficmd[]  = { "rofi", "-combi-modi", "window,drun,ssh", "-show", "combi", "-icon-theme", "Win11-black", "-show-icons", NULL };
 static const char *browswercmd[]  = { "google-chrome", NULL };
 static const char *filescmd[]  = { "thunar", NULL };
 static const char *rdpcmd[]  = { "remmina", NULL };
