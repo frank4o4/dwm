@@ -70,7 +70,7 @@ sudo apt install nitrogen
 Used for themes you can download icons and themes from https://www.gnome-look.org/
 
 ```shell
-sudo aptinstall lxappearance
+sudo apt install lxappearance
 ```
 
 Configure DWM as an X11 option `vim /usr/share/xsessions/dwm.desktop`
